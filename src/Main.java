@@ -1,13 +1,22 @@
 public class Main {
+
+
     public static void main(String[] args) {
         System.out.println(VowelCount("This is a string."));
         System.out.println("Correct output: 4");
-        System.out.println(VowelRemover("Remove all of the vowels."));
-        System.out.println("Correct output: Rmv ll f th vwls");
+
+        System.out.println(VowelCount(" "));
+        System.out.println("Correct output: 0");
+
+        System.out.println(VowelRemover("AIUEO"));
+        System.out.println("Correct output: 5");
+
         System.out.println(ContainsSubstring("Sentence","ten"));
         System.out.println("Correct output: true");
+
         System.out.println(ReverseString("ABCDEF"));
         System.out.println("Correct output: FEDCBA");
+
         System.out.println(PalindromeChecker("level"));
         System.out.println("Correct output: true");
     }
@@ -17,17 +26,70 @@ public class Main {
      * @param input String
      * @return vowel count int
      */
-    public static int VowelCount(String input){
 
-        return -1;
+
+    public static int VowelCount(String input){
+        int length = input.length();
+        String lowerCaseInput = input.toLowerCase();
+        int count = 0;
+        for(int i = 0; i<length; i++){
+            String letter = lowerCaseInput.substring(i,i +1);
+            if(letter.equals("a") || letter.equals("e") || letter.equals("i") || letter.equals("o") || letter.equals("u")){
+                count++;
+            }
+
+        }
+        //make input lower case
+        return count;
     }
 
-    /**
-     * Returns a string with all vowels removed regardless of case
-     * @param input String
-     * @return String with no vowels
+    /*
+    Use the following methods:
+    .length()
+    .substring(start, finish) doesn't include finish
+    .substring(start) goes to the end
+    .indexOf(someString)
+    someString.equals(otherString) !(compare content in a string)!
+
      */
     public static String VowelRemover(String input){
+
+        
+
+        /*
+        int length2 = input.length();
+        String lowerCaseInput2 = input.toLowerCase();
+        int count2 = 0;
+        for(int i2 = 0; i2<length2; i2++){
+            String letter2 = lowerCaseInput2.substring(i2,i2 +1);
+            if(letter2.equals("a") || letter2.equals("e") || letter2.equals("i") || letter2.equals("o") || letter2.equals("u"))
+            {
+
+            }
+
+        }
+
+*/
+
+        /*
+        int length2 =
+
+        Create  .length() int  variable
+        for statement to loop
+         if statement containing vowels --> will create new variable repeatedly
+
+
+
+
+
+
+         .indexOf(theString)
+         count++ to break
+
+
+
+
+        */
 
         return "";
     }
